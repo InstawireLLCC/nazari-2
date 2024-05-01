@@ -21,3 +21,7 @@ export default defineConfig({
       },
     });
 
+// old name servers
+// ns15.inhostedns.com
+// ns25.inhostedns.net
+// ns35.inhostedns.org
