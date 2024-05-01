@@ -1,0 +1,23 @@
+{
+  "name": "nazari.com.ua",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Imran Wafa",
+  "license": "DO NOT USE SOURCE",
+  "devDependencies": {
+    "sass": "^1.75.0",
+    "vite": "^5.2.10"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
+  }
+}

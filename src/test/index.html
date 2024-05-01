@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fade-in on Scroll</title>
+<style>
+  /* CSS to hide div initially and apply fade-in effect */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .visible {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+  <!-- Create multiple divs with the class "fade-in" -->
+  <div class="container">
+    <div class="fade-in" style="height: 300px; background-color: #f0f0f0; margin: 20px;">Div 1</div>
+    <div class="fade-in" style="height: 300px; background-color: #e0e0e0; margin: 20px;">Div 2</div>
+    <div class="fade-in" style="height: 300px; background-color: #d0d0d0; margin: 20px;">Div 3</div>
+    <div class="fade-in" style="height: 300px; background-color: #c0c0c0; margin: 20px;">Div 4</div>
+    <div class="fade-in" style="height: 300px; background-color: #b0b0b0; margin: 20px;">Div 5</div>
+  </div>
+
+<script>
+  // JavaScript to add 'visible' class to elements when they enter viewport
+  document.addEventListener('DOMContentLoaded', function() {
+    let elements = document.querySelectorAll('.fade-in');
+
+    function checkFade() {
+      elements.forEach(element => {
+        if (isElementInViewport(element)) {
+          element.classList.add('visible');
+        }
+      });
+    }
+
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Initial check when the page loads
+    checkFade();
+
+    // Check on scroll
+    window.addEventListener('scroll', checkFade);
+  });
+</script>
+</body>
+</html>
