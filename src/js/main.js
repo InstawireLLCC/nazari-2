@@ -282,7 +282,7 @@ $(document).ready(function () {
 function removeInvisibleClass() {
   document.body.classList.remove('invisible');
 }
-
+ 
 document.addEventListener('DOMContentLoaded', removeInvisibleClass);
 function GoogleMaps_InfoBox_Factory(e) {
   function t(e) {
