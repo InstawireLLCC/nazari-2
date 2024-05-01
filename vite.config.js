@@ -15,10 +15,9 @@ export default defineConfig({
         outDir: 'dist',
         rollupOptions: {
           input: {
-        main:'index.html',
-        about: 'about/index.html',
-        logistics: 'logistics/index.html',
-        connect:'connect/index.html'}} // Change this to your desired output directory name
+        main:'index.html'
+        
+        }} // Change this to your desired output directory name
       },
     });
 
